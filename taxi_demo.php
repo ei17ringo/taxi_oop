@@ -8,7 +8,7 @@
 		$action = $_REQUEST['action'];
 		switch ($action) {
 			case 'engine':
-				$yellow_taxi->engine();
+				$yellow_taxi->start();
 				break;
 			case 'run':
 				$yellow_taxi->run();
