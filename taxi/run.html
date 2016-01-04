@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+	<title>jRumble | A jQuery Plugin That Rumbles Elements</title>
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/prettify.css" />		
+</head>
+<body onLoad="prettyPrint()">
+<div id="content">
+
+		
+		<h3>タクシーが走ります</h3>
+		
+		<div>
+			<div id="demo61"><img src="./car_taxi.png" /></div>
+		</div>
+		
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.jrumble.1.3.min.js"></script> 
+<script src="js/prettify.js"></script>
+<script>
+$(function () {
+    setTimeout('rect()'); //アニメーションを実行
+});
+ 
+function rect() {
+    $("#demo61").animate({
+        marginLeft: "-1350px" //要素を動かす位置
+    }, 3000).animate({
+        marginLeft: "1150px"　//要素を戻す位置
+    }, 0)
+    setTimeout("rect()", 3000);//アニメーションを繰り返す間隔
+}
+</script>
+</body>
+</html>
